@@ -14,14 +14,15 @@ import lombok.Setter;
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Progress {
+public class Video {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long user_id;
+    private String title;
     private Long course_id;
-    private String lessons_complete;
-    private Long quiz_scores;
+    private String video_url;
+    private String created_at;
+
 
 }

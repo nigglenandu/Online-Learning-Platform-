@@ -1,27 +1,27 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Entity;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+
+import java.util.List;
 
 @Entity
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
-public class Progress {
-
+public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
-    private Long user_id;
-    private Long course_id;
-    private String lessons_complete;
-    private Long quiz_scores;
 
+    private Long id;
+    private Long course_id;
+    private String question;
+    private String correct_answer;
+
+    @ElementCollection
+    private List<String> options;
 }
