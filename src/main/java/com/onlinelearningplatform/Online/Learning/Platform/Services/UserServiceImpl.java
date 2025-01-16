@@ -16,16 +16,17 @@ public class UserServiceImpl implements IUserService{
     private UserRepository userRepository;
 
     @Override
-    public void registerUser(UserDto userDto) {
+    public User registerUser(UserDto userDto) {
         User user = new User();
         user.setUsername(userDto.getUsername());
         user.setPassword(userDto.getPassword());
         user.setEmail(userDto.getEmail());
         userRepository.save(user);
+        return user;
     }
 
     @Override
-    public String authenticateUser(LoginDto loginDto) {
+    public User authenticateUser(LoginDto loginDto) {
         return "";
     }
 

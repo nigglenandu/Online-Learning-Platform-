@@ -9,6 +9,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.time.LocalDateTime;
+
 @Entity
 @Getter
 @Setter
@@ -21,6 +23,6 @@ public class Course {
     private Long id;
     private String title;
     private String description;
-    private Long instructor_id;
-    private String created_at;
+    private Long instructorId;
+    private LocalDateTime createdAt;
 }
