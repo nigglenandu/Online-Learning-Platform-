@@ -1,9 +1,11 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Services;
 
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Course;
+import com.onlinelearningplatform.Online.Learning.Platform.Entity.CourseDto;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class CourseServiceImpl implements ICourseService{
@@ -18,12 +20,12 @@ public class CourseServiceImpl implements ICourseService{
     }
 
     @Override
-    public Course getCourseById(Long courseId) {
+    public Optional<Course> getCourseById(Long courseId) {
         return null;
     }
 
     @Override
-    public void updateCourse(Long courseId) {
+    public void updateCourse(Long courseId, CourseDto courseDto) {
 
     }
 
