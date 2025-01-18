@@ -19,9 +19,9 @@ public class Progress {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    private Long user_id;
-    private Long course_id;
-    private String lessons_complete;
-    private Long quiz_scores;
+    private Long userId;
+    private Long courseId;
+    private int lessonsComplete;
+    private Long quizScores;
 
 }

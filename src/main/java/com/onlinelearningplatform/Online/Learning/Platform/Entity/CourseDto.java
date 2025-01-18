@@ -15,7 +15,7 @@ import javax.validation.constraints.NotNull;
 public class CourseDto {
 
     @NotNull(message = "Title is required")
-    private String email;
+    private String title;
 
     @NotNull(message = "Description is required")
     private String description;
