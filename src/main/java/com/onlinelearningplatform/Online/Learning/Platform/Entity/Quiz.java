@@ -18,9 +18,11 @@ public class Quiz {
     @GeneratedValue(strategy = GenerationType.AUTO)
 
     private Long id;
-    private Long course_id;
+    private Long courseId;
     private String question;
-    private String correct_answer;
+
+    @ElementCollection
+    private List<String> correctAnswer;
 
     @ElementCollection
     private List<String> options;

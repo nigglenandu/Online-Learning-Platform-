@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.util.Optional;
+
 @RestController
 public class AuthController {
     @Autowired
@@ -24,11 +26,8 @@ public class AuthController {
 
     @PostMapping("/login")
     public ResponseEntity<User> authenticateUser(@RequestBody LoginDto loginDto){
-        User user = userService.authenticateUser(loginDto);
-        if(user != null){
-            return new ResponseEntity<>(user, HttpStatus.OK);
-        } else {
-            return new ResponseEntity<>(HttpStatus.UNAUTHORIZED);
-        }
+        return userService.authenticateUser(loginDto)
+                .map(value -> new ResponseEntity<>(value, HttpStatus.OK))
+                .orElseGet(() -> new ResponseEntity<>(HttpStatus.UNAUTHORIZED));
     }
 }

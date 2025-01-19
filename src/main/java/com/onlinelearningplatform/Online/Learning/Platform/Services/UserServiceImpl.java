@@ -8,6 +8,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class UserServiceImpl implements IUserService{
@@ -26,17 +27,17 @@ public class UserServiceImpl implements IUserService{
     }
 
     @Override
-    public User authenticateUser(LoginDto loginDto) {
-        return "";
+    public Optional<User> authenticateUser(LoginDto loginDto) {
+        return Optional.ofNullable(userRepository.findByEmailAndPassword(loginDto.getEmail(), loginDto.getPassword()));
     }
 
     @Override
-    public User getUserById(Long id) {
-        return null;
+    public Optional<User> getUserById(Long id) {
+        return userRepository.findById(id);
     }
 
     @Override
     public List<User> getAllUsers() {
-        return List.of();
+        return userRepository.findAll();
     }
 }

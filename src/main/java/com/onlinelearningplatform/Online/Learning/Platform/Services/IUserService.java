@@ -5,11 +5,12 @@ import com.onlinelearningplatform.Online.Learning.Platform.Entity.User;
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.UserDto;
 
 import java.util.List;
+import java.util.Optional;
 
 public interface IUserService {
     User registerUser(UserDto userDto);
-    User authenticateUser(LoginDto loginDto);
-    User getUserById(Long id);
+    Optional<User> authenticateUser(LoginDto loginDto);
+    Optional<User> getUserById(Long id);
     List<User> getAllUsers();
 
 }
