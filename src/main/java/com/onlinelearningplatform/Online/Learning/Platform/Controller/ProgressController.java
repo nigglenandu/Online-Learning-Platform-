@@ -2,7 +2,7 @@ package com.onlinelearningplatform.Online.Learning.Platform.Controller;
 
 
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Progress;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.ProgressDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.ProgressDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Services.IServiceProgress;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

@@ -1,7 +1,7 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Controller;
 
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Course;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.CourseDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.CourseDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Services.ICourseService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;

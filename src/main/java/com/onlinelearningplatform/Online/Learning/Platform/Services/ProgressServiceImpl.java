@@ -1,7 +1,7 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Services;
 
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Progress;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.ProgressDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.ProgressDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Repository.ProgressRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

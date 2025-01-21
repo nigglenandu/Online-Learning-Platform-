@@ -2,8 +2,8 @@ package com.onlinelearningplatform.Online.Learning.Platform.Services;
 
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Progress;
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Quiz;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.QuizDto;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.QuizSubmissionDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.QuizDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.QuizSubmissionDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Repository.ProgressRepository;
 import com.onlinelearningplatform.Online.Learning.Platform.Repository.QuizRepository;
 import org.springframework.beans.factory.annotation.Autowired;

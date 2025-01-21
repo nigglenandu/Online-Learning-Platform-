@@ -1,4 +1,4 @@
-package com.onlinelearningplatform.Online.Learning.Platform.Entity;
+package com.onlinelearningplatform.Online.Learning.Platform.Dto;
 
 
 import lombok.AllArgsConstructor;

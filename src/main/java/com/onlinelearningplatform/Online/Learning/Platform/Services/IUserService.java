@@ -1,8 +1,8 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Services;
 
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.LoginDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.LoginDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.User;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.UserDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.UserDto;
 
 import java.util.List;
 import java.util.Optional;

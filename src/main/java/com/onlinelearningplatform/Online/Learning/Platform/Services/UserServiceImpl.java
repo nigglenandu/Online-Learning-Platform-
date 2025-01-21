@@ -1,8 +1,8 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Services;
 
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.LoginDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.LoginDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.User;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.UserDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.UserDto;
 import com.onlinelearningplatform.Online.Learning.Platform.Repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

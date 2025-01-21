@@ -20,9 +20,9 @@ public class Video {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     private String title;
-    private Long course_id;
-    private String video_url;
-    private String created_at;
+    private Long courseId;
+    private String videoUrl;
+    private String createdAt;
 
 
 }

@@ -1,7 +1,7 @@
 package com.onlinelearningplatform.Online.Learning.Platform.Services;
 
 import com.onlinelearningplatform.Online.Learning.Platform.Entity.Progress;
-import com.onlinelearningplatform.Online.Learning.Platform.Entity.ProgressDto;
+import com.onlinelearningplatform.Online.Learning.Platform.Dto.ProgressDto;
 
 import java.util.List;
 import java.util.Optional;
