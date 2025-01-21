@@ -13,7 +13,7 @@ import javax.validation.Valid;
 import java.util.List;
 
 @RestController
-@RequestMapping("/video")
+@RequestMapping("/courses/{courseId}/videos")
 public class VideoController {
     @Autowired
     private IServiceVideo serviceVideo;
@@ -33,8 +33,13 @@ public class VideoController {
     }
 
     @GetMapping
-    public List<Video> getVideoAByID(@PathVariable Long courseId){
-        return serviceVideo.getVideosByCourseId(courseId);
+    public ResponseEntity<List<Video>> getVideoAByID(@PathVariable Long courseId){
+        List<Video> videos = serviceVideo.getVideosByCourseId(courseId);
+        if(videos.isEmpty()){
+            return new ResponseEntity<>(HttpStatus.NOT_FOUND);
+        } else {
+            return new ResponseEntity<>(videos, HttpStatus.OK);
+        }
     }
 
     @DeleteMapping("/{videoId}")
@@ -42,5 +47,4 @@ public class VideoController {
         serviceVideo.deleteVideoById(videoId);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-
 }
