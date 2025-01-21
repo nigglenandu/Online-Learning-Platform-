@@ -22,5 +22,5 @@ public class QuizDto {
     private List<String> options;
 
     @NotNull(message = "Correct answer is required")
-    private String correctAnswer;
+    private List<String> correctAnswer;
 }

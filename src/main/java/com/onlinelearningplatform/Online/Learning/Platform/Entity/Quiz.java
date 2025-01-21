@@ -26,4 +26,6 @@ public class Quiz {
 
     @ElementCollection
     private List<String> options;
+
+
 }
