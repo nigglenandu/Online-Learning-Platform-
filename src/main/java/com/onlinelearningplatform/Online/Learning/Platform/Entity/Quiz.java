@@ -9,10 +9,6 @@ import lombok.Setter;
 import java.util.List;
 
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Quiz {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -27,5 +23,43 @@ public class Quiz {
     @ElementCollection
     private List<String> options;
 
+    public String getQuestion() {
+        return question;
+    }
 
+    public void setQuestion(String question) {
+        this.question = question;
+    }
+
+    public List<String> getOptions() {
+        return options;
+    }
+
+    public void setOptions(List<String> options) {
+        this.options = options;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public Long getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
+    }
+
+    public List<String> getCorrectAnswer() {
+        return correctAnswer;
+    }
+
+    public void setCorrectAnswer(List<String> correctAnswer) {
+        this.correctAnswer = correctAnswer;
+    }
 }

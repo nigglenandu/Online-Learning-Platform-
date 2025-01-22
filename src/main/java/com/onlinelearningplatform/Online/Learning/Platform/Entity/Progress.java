@@ -10,10 +10,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 @Entity
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class Progress {
 
     @Id
@@ -24,4 +20,43 @@ public class Progress {
     private int lessonsComplete;
     private Long quizScores;
 
+    public Long getCourseId() {
+        return courseId;
+    }
+
+    public void setCourseId(Long courseId) {
+        this.courseId = courseId;
+    }
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public int getLessonsComplete() {
+        return lessonsComplete;
+    }
+
+    public void setLessonsComplete(int lessonsComplete) {
+        this.lessonsComplete = lessonsComplete;
+    }
+
+    public Long getQuizScores() {
+        return quizScores;
+    }
+
+    public void setQuizScores(Long quizScores) {
+        this.quizScores = quizScores;
+    }
+
+    public Long getUserId() {
+        return userId;
+    }
+
+    public void setUserId(Long userId) {
+        this.userId = userId;
+    }
 }

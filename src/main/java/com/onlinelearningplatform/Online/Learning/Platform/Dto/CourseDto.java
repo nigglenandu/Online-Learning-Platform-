@@ -8,10 +8,6 @@ import lombok.Setter;
 
 import javax.validation.constraints.NotNull;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class CourseDto {
 
     @NotNull(message = "Title is required")
@@ -19,4 +15,20 @@ public class CourseDto {
 
     @NotNull(message = "Description is required")
     private String description;
+
+    public @NotNull(message = "Description is required") String getDescription() {
+        return description;
+    }
+
+    public void setDescription(@NotNull(message = "Description is required") String description) {
+        this.description = description;
+    }
+
+    public @NotNull(message = "Title is required") String getTitle() {
+        return title;
+    }
+
+    public void setTitle(@NotNull(message = "Title is required") String title) {
+        this.title = title;
+    }
 }

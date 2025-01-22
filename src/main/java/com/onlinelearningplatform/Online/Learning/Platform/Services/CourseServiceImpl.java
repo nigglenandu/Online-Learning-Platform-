@@ -40,7 +40,7 @@ public class CourseServiceImpl implements ICourseService{
         Optional<Course> courseOpt = courseRepository.findById(courseId);
         if(courseOpt.isPresent()){
             Course course = courseOpt.get();
-            course.setTitle(course.getTitle());
+            course.setTitle(courseDto.getTitle());
             course.setDescription(courseDto.getDescription());
             courseRepository.save(course);
         }
