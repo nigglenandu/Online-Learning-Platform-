@@ -11,10 +11,6 @@ import lombok.Setter;
 import javax.validation.constraints.Email;
 import javax.validation.constraints.NotNull;
 
-@Getter
-@Setter
-@AllArgsConstructor
-@NoArgsConstructor
 public class LoginDto {
 
     @Id
@@ -26,4 +22,20 @@ public class LoginDto {
 
     @NotNull(message = "Password is required")
     private String password;
+
+    public @NotNull(message = "Email is required") @Email(message = "Email should be valid") String getEmail() {
+        return email;
+    }
+
+    public void setEmail(@NotNull(message = "Email is required") @Email(message = "Email should be valid") String email) {
+        this.email = email;
+    }
+
+    public @NotNull(message = "Password is required") String getPassword() {
+        return password;
+    }
+
+    public void setPassword(@NotNull(message = "Password is required") String password) {
+        this.password = password;
+    }
 }
