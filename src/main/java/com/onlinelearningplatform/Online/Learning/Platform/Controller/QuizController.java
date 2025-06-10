@@ -22,26 +22,26 @@ public class QuizController {
     @PostMapping
     public ResponseEntity<Void> addQuiz(@Valid @RequestBody QuizDto quizDto, Long courseId){
         quizService.addQuiz(quizDto, courseId);
-        return new ResponseEntity<>(HttpStatus.CREATED);
+        return ResponseEntity.status(HttpStatus.CREATED).build();
     }
 
     @GetMapping
     public ResponseEntity<List<Quiz>> getQuizzesByCourseId(@PathVariable Long courseId){
         return quizService.getQuizzesByCourseId(courseId)
-                .map(value -> new ResponseEntity<>(value, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @GetMapping("/{quizId}")
     public ResponseEntity<Quiz> getQuizById(@PathVariable Long quizId){
         return quizService.getByQuizId(quizId)
-                .map(value -> new ResponseEntity<>(value, HttpStatus.OK))
-                .orElseGet(() -> new ResponseEntity<>(HttpStatus.NOT_FOUND));
+                .map(ResponseEntity::ok)
+                .orElse(ResponseEntity.notFound().build());
     }
 
     @PostMapping("/{quizId}/submit")
     public ResponseEntity<Void> submitQuestionAnswer(@PathVariable Long quizId, @Valid @RequestBody QuizSubmissionDto quizSubmissionDto){
         quizService.submitQuestionAnswers(quizId, quizSubmissionDto);
-        return new ResponseEntity<>(HttpStatus.OK);
+        return ResponseEntity.ok().build();
     }
 }
